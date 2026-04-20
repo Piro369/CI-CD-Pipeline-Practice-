@@ -8,11 +8,11 @@ import joblib
 iris = sklearn.datasets.load_iris() 
 
 print('-'*10)
-print(iris.data.head())
+print(iris.head())
 print('-'*10)
 
 
-X,y = iris.data, iris.target
+X,y = iris.iloc[:, :-1], iris['species']
 
 X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=0.2, random_state=42)
 
