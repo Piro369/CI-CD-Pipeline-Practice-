@@ -29,7 +29,7 @@ jobs:
       with :
         name : model-file
         path: |
-          model.joblib 
+          model.joblib
           output.csv
 
         
