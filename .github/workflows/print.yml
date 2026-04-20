@@ -20,8 +20,16 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install -r requirements.txt
 
-    - name: Run Python file
+    - name: Run Python file (Model)
       run: |
-        python app.py
+        python model.py
+
+    - name: Save Model file
+      uses: actions/upload-artifact@v4
+      with :
+        name : model-file
+        path: model.joblib output.csv
+
+        
 
     
