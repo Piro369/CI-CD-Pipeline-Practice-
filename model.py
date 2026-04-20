@@ -24,6 +24,6 @@ print('\n\nAccuracy Score: ')
 print(accuracy_score(y_test, y_pred))   
 
 
-# joblib.dump(model,'model.joblib')
+joblib.dump(model,'model.joblib')
 
-# y_pred.to_csv('output.csv', index=False)
+y_pred.to_csv('output.csv', index=False)
