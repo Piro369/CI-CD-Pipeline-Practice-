@@ -8,11 +8,11 @@ import joblib
 iris = sklearn.datasets.load_iris() 
 
 print('-'*10)
-print(iris.head())
-print('-'*10)
+print(iris.data[:5])
+print('-'*20)
 
 
-X,y = iris.iloc[:, :-1], iris['species']
+X,y = iris.data, iris.target
 
 X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=0.2, random_state=42)
 
@@ -24,6 +24,6 @@ print('\n\nAccuracy Score: ')
 print(accuracy_score(y_test, y_pred))   
 
 
-joblib.dump(model,'model.joblib')
+# joblib.dump(model,'model.joblib')
 
-y_pred.to_csv('output.csv', index=False)
+# y_pred.to_csv('output.csv', index=False)
