@@ -19,6 +19,7 @@ X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=0.2, random_s
 model = LogisticRegression()
 model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
+y_pred = pd.DataFrame(y_pred, columns=['Predicted'])
 
 print('\n\nAccuracy Score: ')
 print(accuracy_score(y_test, y_pred))   
