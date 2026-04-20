@@ -3,7 +3,7 @@ name: Print Message
 on: [push]
 
 jobs:
-  runs_my_script:
+  runs-my-script:
     runs-on: ubuntu-latest
     
     steps:
